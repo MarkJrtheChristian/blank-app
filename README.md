@@ -1,19 +1,10 @@
-# 🎈 Blank app template
+# Build and deploy
 
-A simple Streamlit app template for you to modify!
+Command to build the application. PLease remeber to change the project name and application name
+```
+gcloud builds submit --tag gcr.io/testa-53w5j7/CommsCreatorTest  --project=testa-53w5j7
+```
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
-
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+Command to deploy the application
+```
+gcloud run deploy --image gcr.io/testa-53w5j7/CommsCreatorTest --platform managed  --project=testa-53w5j7 --allow-unauthenticated
